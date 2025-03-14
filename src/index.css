@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 overflow-x-hidden;
+    font-feature-settings: "kern";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improve responsive typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+
+  /* Improve focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-accent outline-2 outline-offset-2;
+  }
+
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply touch-manipulation;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .heading-primary {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 sm:mb-6 md:mb-8;
+  }
+  
+  .heading-secondary {
+    @apply text-xl sm:text-2xl font-semibold text-secondary mb-3 sm:mb-4 md:mb-6;
+  }
+
+  /* Responsive image handling */
+  .responsive-img {
+    @apply w-full h-auto object-cover;
+  }
+
+  /* Responsive card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-6;
+  }
+
+  /* Responsive button styles */
+  .btn {
+    @apply px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-white shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+} 
