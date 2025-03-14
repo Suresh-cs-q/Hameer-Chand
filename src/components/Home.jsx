@@ -139,16 +139,6 @@ const Home = () => {
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6"
               >
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(66, 153, 225, 0.3)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-primary to-accent text-white px-6 sm:px-8 py-3 rounded-lg shadow-lg transition-all duration-300 font-medium flex items-center w-full sm:w-auto justify-center"
-                  onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Explore My Work
-                  <FaChevronDown className="ml-2 w-4 h-4" />
-                </motion.button>
-                
                 <motion.a
                   href="#research"
                   whileHover={{ scale: 1.05 }}
